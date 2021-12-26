@@ -1,0 +1,11 @@
+
+{% extends 'employee_list/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form action="post" autocomplete="off">
+    {%csrf_token %}
+    {{form | crispy}}
+</form>
+ 
+{% endblock content %} 
