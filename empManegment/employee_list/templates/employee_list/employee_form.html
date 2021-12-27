@@ -3,9 +3,15 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<form action="post" autocomplete="off">
+<form action="" method="post" autocomplete="off">
     {%csrf_token %}
     {{form | crispy}}
+    <button type="submit" class="btn btn-danger mb-4 mt-3"><i class="fas fa-share"></i> Submit</button>
+    <div class="col-md-4">
+        <a href="{% url 'employee_list' %}" class="btn btn-secondary ">
+            <i class="fas fa-stream"></i> Back to list
+        </a>
+    </div>
 </form>
  
 {% endblock content %} 
